@@ -1,0 +1,58 @@
+/* Style for body to center the form on the page */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfbfbf; /* Light background color */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form container */
+form {
+  background-color: rgb(197, 240, 196);
+  padding: 20px;
+  border-radius: 5%;
+  box-shadow: inset 3px -3px 0px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+/* Label styling */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Input fields styling */
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Hover effect for input fields */
+input[type="text"]:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
+}
+
+/* Optional styling for the button (if you add one) */
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in ;
+}
+
+button:hover {
+  background-color: #2400b3;
+}

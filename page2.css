@@ -1,0 +1,68 @@
+/* Style for body to center the content on the page */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfbfbf; /* Light background color */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Table container styling */
+table {
+  width: 80%; /* Adjust width as needed */
+  border-collapse: collapse;
+  background-color: rgb(197, 240, 196); /* Light green */
+  box-shadow: inset 3px -3px 0px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+/* Table header styling */
+th {
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-bottom: 3px solid #0056b3; /* Darker blue border */
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Table row styling */
+td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+/* Alternating row background */
+tr:nth-child(even) {
+  background-color: #f0f4f8; /* Light grey for alternating rows */
+}
+
+/* Hover effect for rows */
+tr:hover {
+  background-color: #ca7a73;
+  border: 1px solid black; /* Slight hover effect on row */
+}
+
+/* Center 'No data available' message */
+td[colspan="4"] {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+/* Responsive table for smaller screens */
+@media (max-width: 768px) {
+  table {
+    width: 100%; /* Make table width 100% on smaller screens */
+  }
+
+  th, td {
+    padding: 10px 5px;
+  }
+}

@@ -1,0 +1,74 @@
+/* Normal screen styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Light blue background for a soft look */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.item-info p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+#QRpart {
+  flex: 0;
+}
+
+#QRpart img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+.print-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.print-btn:hover {
+  background-color: #45a049;
+}
+
+/* Print styling */
+@media print {
+  /* Hide everything except the QR code */
+  body * {
+    visibility: hidden;
+  }
+
+  #QRpart, #QRpart * {
+    visibility: visible;
+  }
+
+  #QRpart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

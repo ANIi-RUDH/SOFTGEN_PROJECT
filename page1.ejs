@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 1</title>
+  <link rel="stylesheet" href="styles/page1.css"> <!-- Kept the same href as requested -->
+</head>
+<body>
+  <form action="/submit" method="POST"> <!-- 'action' points to the form handler (you can change '/submit' to your endpoint) -->
+    <label for="item_name">Enter Name</label>
+    <input type="text" name="item_name" id="item_name" required>
+
+    <label for="item_price">Enter Price</label>
+    <input type="text" name="item_price" id="item_price" required>
+
+    <label for="item_quantity">Enter Quantity</label>
+    <input type="text" name="item_quantity" id="item_quantity" required>
+
+    <button type="submit">Submit</button> <!-- Submit button -->
+  </form>
+</body>
+</html>

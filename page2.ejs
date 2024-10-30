@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 2</title>
+  <link rel="stylesheet" href="styles/page2.css"> 
+</head>
+<body>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>PRICE</th>
+      <th>QUANTITY</th>
+      <th>ACTION</th>
+    </tr>
+  
+    <% if (object && object.length > 0) { %>
+      <% object.forEach(element => {  %>
+        <tr>
+          <td><%= element.id %></td>
+          <td><%= element.name %></td>
+          <td><%= element.price %></td>
+          <td><%= element.quantity %></td>
+          <td>
+            <!-- Individual form for each row -->
+            <form action="/qrgeneration" method="post">
+              <input type="hidden" name="id" value="<%= element.id %>">
+              <input type="hidden" name="name" value="<%= element.name %>">
+              <input type="hidden" name="price" value="<%= element.price %>">
+              <input type="hidden" name="quantity" value="<%= element.quantity %>">
+              <button type="submit">GENERATE QR CODE</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    <% } else { %>
+      <tr>
+        <td colspan="5">No data available</td>
+      </tr>
+    <% } %>
+  </table>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

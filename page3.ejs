@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 3</title>
+  <link rel="stylesheet" href="styles/page3.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+  <div class="container">
+    <div class="item-info">
+      <% if (items) { %>
+        <p><strong>Name:</strong> <%= items.name %></p>
+        <p><strong>Price: ₹ </strong> <%= items.price %></p>
+        <p><strong>Quantity:</strong> <%= items.quantity %></p>
+      <% } %>
+    </div>
+
+    <% if (qrData) { %>
+   
+     <% let big=items.name %>
+      <div id="QRpart">
+        <img src="<%= qrData %>" alt="QR Code">
+        <h3 style="margin-left: 70px; color: red;"><%=big.toUpperCase() %></h3>
+      </div>
+    <% } %>
+  </div>
+
+  <!-- Print button -->
+  <button class="print-btn" onclick="printQRCode()">Print QR Code</button>
+
+  <script>
+    function printQRCode() {
+      window.print();  // Trigger the browser's print functionality
+    }
+  </script>
+</body>
+</html>
